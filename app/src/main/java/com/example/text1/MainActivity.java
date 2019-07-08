@@ -18,14 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RecyclerView dataView = findViewById(R.id.dataView);
-        RecyclerViewDivider.with(this).build().addTo(dataView);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        dataView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         RecyclerViewDivider.with(this).build().addTo(recyclerView);
-        //recyclerView.addItemDecoration(new MDGridRvDividerDecoration(this));
-
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 7, RecyclerView.VERTICAL, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 1, RecyclerView.VERTICAL, false));
         ArrayList<String> datas = new ArrayList<>();
         datas.add("cat");
         datas.add("dog");
@@ -35,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         datas.add("dog");
         datas.add("cat");
         datas.add("dog");
-        recyclerView.setAdapter(new Adapter(datas));
-        dataView.setAdapter(new Adapter(datas, 7, true));
-
+        recyclerView.setAdapter(new Adapter(datas, 7, true));
+        RecyclerView dataView = findViewById(R.id.dataView);
+        RecyclerViewDivider.with(this).build().addTo(dataView);
+        dataView.setLayoutManager(new GridLayoutManager(this, 1, RecyclerView.VERTICAL, false));
+        dataView.setAdapter(new Adapter(datas, 7, false));
     }
 }

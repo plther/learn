@@ -26,8 +26,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.VH> {
     }
     public Adapter(List<String> data, int columns) {
         this.mDatas = data;
-        this.rows = columns;
-        this.columns = 1;
+        this.columns = columns;
+        this.rows = 1;
     }
 
     public Adapter(List<String> data, int rows, int columns) {
