@@ -31,8 +31,8 @@
             android:layout_width="24dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="11sp"
-            tools:text="1\n月" />
+            android:text="月"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -100,22 +100,21 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dataView"
-        android:layout_width="24dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lineOfDate" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/dataView"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lineOfDate" />
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+    <!--android:id="@+id/recyclerView"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toRightOf="@id/dataView"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/lineOfDate" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
